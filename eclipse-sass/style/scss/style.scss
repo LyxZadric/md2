@@ -1,0 +1,187 @@
+@import "partials/_variables.scss";
+
+body{
+    max-width: 100%;
+    margin : 0;
+
+    .container{
+        max-width: 960px;
+        margin : auto;
+    }
+    .hidden-text{
+        font-size : 0px;
+    }
+}
+header{
+    background : url("../../images/bg_header.jpg") no-repeat;
+    background-size : cover;
+    height : 400px;
+    display : flex;
+    flex-direction : column;
+}
+    #mobile-header {
+        display: block;
+    }
+    #navigation{
+        display : none;
+        margin-bottom : $ge;
+        #main-nav {
+            ul{
+            max-width: 600px;
+            height: 45px;
+            padding : 0;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            background-color : rgba(0,0,0,0.3);
+
+                li{
+                    padding-left : $e;
+                    a{
+                        text-decoration: none;
+                        color : white;
+                    }
+                }
+                li:nth-of-type(5){
+                    padding-right: $e;
+                }
+            }
+        }
+    }
+
+main{
+    .service{
+        padding-left : $ge;
+        margin : $ge $e $ge $e;
+
+        h2{
+            color : $grisf;
+        }
+        .more{
+            color : $rouge;
+            text-decoration : none;
+        }
+    }
+    .service:nth-of-type(1){
+        background : url("../../images/bg_web.gif") no-repeat;
+    }
+    .service:nth-of-type(2){
+        background : url("../../images/bg_mobile.gif") no-repeat;
+    }
+    .service:nth-of-type(3){
+        background : url("../../images/bg_photo.gif") no-repeat;
+    }
+
+    #slider{
+        background-color : $gris;
+
+        .item{
+            margin-top : $ge;
+            display : flex;
+            flex-direction : column;
+
+            .item-infos{
+                order : 2;
+                margin-left : $ge;
+                margin-top : $e;
+                a{
+                    text-decoration: none;
+                    h2{
+                        color : $rouge;
+                    }
+                }
+                h3{
+                    display : list-item;
+                    list-style: disc;
+                    color : $grisf;
+                    margin-left : $e;
+                }
+                .btn{
+                    width: 140px;
+                    height: 40px;
+                    display : block;
+                    margin : auto;
+                    margin-right : $ge;
+                    background-color : $rouge;
+                    border-radius : 5px;
+                    color : white;
+                    display : flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .item-img{
+                order : 1;
+                margin-left : $ge;
+                margin-right: $ge;
+            }
+        }
+    }
+
+}
+
+footer{
+    background-color: $rouge;
+    color : white;
+    .footer-inner{
+        padding-top : $ge;
+        padding-bottom : $e;
+    }
+    .footer-col{
+        border-top : 1px solid $gris;
+        margin : 0 $ge $ge $ge;
+        padding-top : $ge;
+
+
+        h3{
+            margin : 0;
+            display : list-item;
+            list-style: disc;
+        }
+    }
+    .footer-col:nth-of-type(1){
+        border : none;
+        padding-top : 0;
+    }
+    #social-nav{
+        ul{
+            display : flex;
+            flex-wrap: wrap;
+            li{
+                list-style: none;
+                a{
+                    color : white;
+                    font-size: 0;
+                    i{
+                        font-size: 2rem;
+                        padding-left : $e;
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+/* MEDIA QUERIES **/
+@media only screen and (min-width: 767px){
+    header{
+        display : flex;
+        flex-direction: row;
+        
+    }
+    #mobile-header {
+        display: none;
+    }
+    #navigation{
+        display:block;
+    }
+}
