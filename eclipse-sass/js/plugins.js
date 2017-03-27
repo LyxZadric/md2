@@ -15,7 +15,7 @@ $(document).ready(function() {
         margin: 10,
         nav : true,
         items : 1,
-        navText : ['Suivant', 'Précédent'],
+        navText : ['<i class="fa fa-arrow-circle-left fa-slider" id="fa-left"></i>', '<i class="fa fa-arrow-circle-right fa-slider" id="fa-right"></i>'],
         dots : false,
 
     })
