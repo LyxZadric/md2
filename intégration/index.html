@@ -6,36 +6,266 @@
     <title>La tour d'auvergne</title>
     <link rel="stylesheet" href="styles/css/style.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <!-- sidr menu -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.dark.min.css">
     <!-- slick carousel -->
     <link rel="stylesheet" href="slick/slick/slick.css">
     <link rel="stylesheet" href="slick/slick/slick-theme.css">
+    <!-- include font-awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-<div class="container">
-    <header>
-        <div class="row">
 
-        <img src="images/logo/logo.png" alt="logo">
-
-        <p> Suivez-nous sur Facebook :</p>
-
-
-
-        <div class="your-class">
-            <div>your content</div>
-            <div>your content</div>
-            <div>your content</div>
-        </div>
-    </header>
+    <div class="content">
+        <!-- *********************** HEADER : logo + nav -->
+        <header>
+            <div class="row">
+                <div class="col-xs-2 col-sm-2 col-sm-offset-1 col-md-2 col-md-offset-1 col-lg-2 col-lg-offset-1">
+                    <div class="logo-content">
+                        <img src="images/logo/logo.png" alt="logo" class="img-responsive logo">
+                    </div>
+                </div>
 
 
+                <div class="col-xs-2 col-sm-8 col-md-8 col-lg-8">
+
+                    <div id="header-wrap">
+                        <div id="mobile-header">
+                            <a id="responsive-menu-button" href="#sidr-main"><i class="fa fa-bars fa-3x"></i>Menu</a>
+                        </div>
+
+                        <div id="navigation">
+                            <nav id="main-nav">
+                                <ul class="container">
+                                    <li><a href="#">Accueil</a></li>
+                                    <li><a href="#">Actualités</a></li>
+                                    <li><a href="#">Sports</a></li>
+                                    <li><a href="#">Activités</a></li>
+                                    <li><a href="#">L'asso</a></li>
+                                    <li><a href="#">Espace Membres</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-2  col-sm-8 col-md-8 col-lg-8">
+                    <p class="hidden-text"> Suivez-nous sur Facebook :</p>
+                </div>
+            </div>
+
+            <!-- *********************** HEADER : GALERIE -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="carousel">
+                        <div><img src="images/velo.jpg" alt="" class="img-responsive"></div>
+                        <div><img src="images/volley2.jpg" alt="" class="img-responsive"></div>
+                        <div><img src="images/rando-nature.jpg" alt="" class="img-responsive"></div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+<!-- *********************** MAIN-->
+        <!-- *********************** Actus -->
+        <main>
+            <div class="row main-content">
+                <div class="main-actu">
+                    <div class="col-sm-10 col-md-8 col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+
+                                <h1> ACTUS </h1>
+
+                                <article>
+                                    <div class="actu-principale">
+                                        <img src="images/vtt.jpg" alt="course-vtt" class="img-responsive">
+                                        <h2>Classement du championnat de France de VTT</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut felis elit, sagittis sed erat at, rutrum tempus turpis. Etiam ac purus ac sem pellentesque congue a vel neque. Vivamus at nunc non tortor sagittis sollicitudin
+                                            ut sit amet arcu. Cras vel urna non nulla consequat lacinia. Morbi posuere posuere mollis.</p>
+                                        <a href="#">En lire plus ...</a>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
 
 
+                        <div class="row">
+                            <section class="section-article">
+                                <article class="article">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-col">
 
+                                        <h3>Les filles remportent la victoire</h3>
+                                        <img src="images/volley.jpg" alt="course-vtt" class="img-responsive">
+                                        <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu nulla pulvinar
+                                            maximus. Donec consequat massa nec dui blandit mattis.</p>
+                                        <a href="#">En lire plus ...</a>
+                                    </div>
+                                </article>
+
+                                <article class="article">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-col">
+
+                                        <h3>Elise, espoir féminin se classe au championnat régional de gymnastique</h3>
+                                        <img src="images/gym.jpg" alt="course-vtt" class="img-responsive">
+                                        <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu nulla pulvinar
+                                            maximus. Donec consequat massa nec dui blandit mattis.</p>
+                                        <a href="#">En lire plus ...</a>
+                                    </div>
+                                </article>
+
+                                <article class="article">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 article-col">
+
+                                        <h3>Fabrice CRAYON reprend la section Judo</h3>
+                                        <img src="images/judo.jpg" alt="course-vtt" class="img-responsive">
+                                        <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu nulla pulvinar
+                                            maximus. Donec consequat massa nec dui blandit mattis.</p>
+                                        <a href="#">En lire plus ...</a>
+                                    </div>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!-- *********************** aside -->
+                <aside>
+                    <div class="col-sm-10 col-md-4 col-lg-4">
+                        <div class="row">
+                            <div class="search">
+                                <div class="col-sm col-md col-lg">
+                                    <h1> Recherche </h1>
+
+                                    <input type="search" name="search">
+                                    <input type="submit" value="rechercher">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="month">
+                                <div class="col-sm col-md col-lg">
+
+                                    <h1> Le mois du ... </h1>
+
+                                    <section class="aside-section">
+                                        <article class="aside-article">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                                    <img src="images/karaté.jpg" alt="course-vtt" class="img-responsive">
+                                                </div>
+
+                                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                                    <h4>Sportif du mois</h4>
+                                                    <h5>Marie Martin</h5>
+                                                    <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu</p>
+                                                    <a href="#">En lire plus ...</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                </div>
+
+
+                                <article class="aside-article">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <img src="images/escalade.jpg" alt="course-vtt" class="img-responsive">
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <h4>Activité du mois</h4>
+                                            <h5>L'escalade indoor</h5>
+                                            <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu nulla</p>
+                                            <a href="#">En lire plus ...</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="aside-article">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <img src="images/rando.jpg" alt="course-vtt" class="img-responsive">
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <h4>Section du mois</h4>
+                                            <h5>Le randonnée club</h5>
+                                            <p>in augue sit amet hendrerit. Fusce a porta ligula, vitae tristique orci. Cras maximus, turpis non accumsan scelerisque, nisi quam condimentum ex, in fringilla lorem mauris id tellus. Aenean ut nisl eu nulla</p>
+                                    
+                                            <a href="#">En lire plus ...</a>
+                                        </div>
+                                    </div>
+                                </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </aside>
+
+
+            <!-- *********************** Infos contact + newsletter -->
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="info-contact">
+                        <h1> Infos contact </h1>
+
+                        <h2> La Tour d'Auvergne </h2>
+
+                        <p>8 passage du Couëdic BP 60408<br> 35000 - Rennes<br> 02.99.30.10.89
+                            <br> accueil@tourdauvergneasso.com
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="newsletter">
+                        <h1> Inscription newsletter </h1>
+
+                        <form>
+                            <label> Civilité :</label>
+                            <input type="radio" name="civilité" value="monsieur"> M.
+                            <input type="radio" name="civilité" value="madame"> Mme
+                            <input type="radio" name="civilité" value="mademoiselle"> Mlle<br>
+
+                            <label>Nom : </label><input type="text" name="nom" value="nom"><br>
+                            <label>Prénom : </label><input type="text" name="prenom" value="prenom"><br>
+                            <label>E-mail : </label><input type="text" name="mail" value="e-mail">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- *********************** FOOTER -->
+        <footer>
+            <div class="row">
+                <div class="col-sm-10 col-md-12 col-lg-12">
+                    <div class="content-footer">
+                        <p> Suivez-nous sur Facebook :</p>
+                        <p><a href="#">Mentions légales</a></p>
+                        <p><a href="#">Copyright</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- CONTENT -->
+
+    <!-- *********************** slick -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+
+    <!-- Include the Sidr JS -->
+    <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
 </body>
 
 </html>

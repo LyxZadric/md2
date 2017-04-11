@@ -1,0 +1,56 @@
+.content {
+  max-width: 1280px;
+  margin: auto; }
+
+header #mobile-header {
+  display: block; }
+header #navigation {
+  display: none; }
+header .navbar ul {
+  display: flex; }
+header .carousel {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4em; }
+  header .carousel img {
+    max-height: 400px;
+    margin: auto; }
+
+main .main-content {
+  margin-bottom: 4em; }
+main h1 {
+  max-width: 825px;
+  color: #ff9f1c;
+  position: relative;
+  text-align: center;
+  line-height: 100%;
+  overflow: hidden;
+  font-size: 3em; }
+  main h1:before, main h1:after {
+    content: ".";
+    border-bottom: solid 1px #ff9f1c;
+    position: absolute;
+    line-height: 50%;
+    width: 100%; }
+  main h1:before {
+    margin-left: -100%; }
+main h2, main h3, main h4 {
+  color: #1d70a2; }
+main .actu-principale {
+  margin: 4em 1em 4em 1em; }
+  main .actu-principale a {
+    position: absolute;
+    right: 10%; }
+main .section-article article {
+  margin: 4em 1em 4em 1em; }
+  main .section-article article .article-col {
+    margin-bottom: 4em; }
+    main .section-article article .article-col a {
+      position: absolute;
+      right: 10%; }
+main aside .month .aside-section {
+  margin: 4em 1em 4em 1em; }
+  main aside .month .aside-section .aside-article img {
+    margin: auto; }
+
+/*# sourceMappingURL=style.css.map */
