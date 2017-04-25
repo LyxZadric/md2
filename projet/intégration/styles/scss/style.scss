@@ -1,0 +1,473 @@
+ @import "_variable";
+
+ /*@font-face {
+ font-family: 'bonveno';
+ src: url('font/BonvenoCF-Light.otf') format('truetype');
+ }*/
+ @font-face{
+     font-family : "bonveno";
+     src : url('../../font/BonvenoCF-Light.otf');
+ }
+
+ @font-face{
+     font-family : "copperplate";
+     src : url('../../font/Copperplate.ttc');
+ }
+
+ body{
+    p,a{
+        font-family : "bonveno";
+    }
+    h1,h2,h3{
+        font-family : "copperplate"
+    }
+    .slide{
+        position : relative;
+        left: -100%;
+    }
+    .slidebis{
+        position : relative;
+        left : 0;
+    }
+    hr{
+        width: 90%;
+        margin : auto;
+        margin-bottom : $e;
+    }
+    .container-img{
+        padding:0;
+        max-width : 600px;
+        margin : $a;
+
+        p{
+            width: 150px;
+            z-index: 2;
+            position : relative;
+            bottom : 16em;
+            left : $e;
+            background-color : rgba(255,255,255,0.5);
+            padding-left : 0.5em;
+            border-radius : 5px;
+        }
+    }
+ }
+
+.container-fluid{
+    max-width: 1200px;
+}
+header{
+
+    .logo{
+        margin : $ge 0 $ge $e;
+        max-width: 310px;
+    }
+
+    .main-nav{
+        &::before{
+    		display : none;
+    	}
+    	& ul{
+    		display: flex;
+    		flex-flow: row wrap;
+    		justify-content: center;
+    		position: static;
+    	}
+    	&:hover ul{
+    		display : flex;
+    	}
+    }
+
+    .nav-secondaire{
+        font-size: 0.8em;
+        margin-top : $e;
+        display : flex;
+        list-style: none;
+        position : absolute;
+        right : $e;
+
+        li{
+            padding-left : $e;
+            padding-right: $e;
+            border-left : 1px solid black;
+            a{
+                color : black;
+            }
+        }
+        li:nth-of-type(1){
+            border-left : none;
+        }
+    }
+
+    .nav-principale{
+        margin-top : $ge*2;
+        display : flex;
+        list-style: none;
+        position : absolute;
+        right : $e;
+
+        li{
+            padding-left : $e;
+            color : $bleu-c;
+
+            a:hover{
+                color : $bleu;
+            }
+        }
+    }
+
+    .reseaux-sociaux{
+        margin-top : $e;
+        display : flex;
+        justify-content: $c;
+        .list-social{
+            display : flex;
+            list-style : none;
+            padding-left : $e;
+
+            .img-reseaux{
+
+                margin-right : $e/2;
+                width : 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+main{
+    .destination{
+        margin : $a;
+        margin-top : $ge;
+        h1{
+            background : url("../../images-finales/icones/fleche.png") no-repeat;
+            padding-left : $e;
+            margin-left : 0.7em;
+            margin-bottom : $ge/2;
+        }
+        .dest-content{
+            margin : $a;
+            margin-bottom: $ge;
+
+            a{
+                text-decoration: none;
+
+                &:hover img{
+                    filter: grayscale(1);
+                }
+
+                img{
+                    z-index: 1;
+                }
+                h3{
+                    z-index: 2;
+                    position : relative;
+                    top : -8em;
+                    color : rgb(37,95,133);
+                    background-color : rgba(255,255,255,0.5);
+                    border-radius : 5px 0 0 5px;
+                    padding-left : 2em;
+                    margin-left: $e;
+                }
+            }
+        }
+        .dest-link{
+            .dest-img{
+                margin : $a;
+
+                img{
+                    width: 230px;
+                    height: 230px;
+                }
+
+            }
+        }
+    }
+
+    .sejours-content{
+        margin-left : $e;
+        margin-right: $e;
+        h2{
+            @include fleche();
+        }
+        .sejour{
+            .sejour-article{
+                margin-bottom : 3em;
+            }
+            article{
+
+                h3{
+                    margin-bottom : $e;
+                    color : $bleu;
+                }
+                a{
+                    color : $bleu;
+                    position : absolute;
+                    right: $e;;
+                }
+
+                section{
+                    border-top : 1px solid $gris;
+                    margin-top : 4em;
+                    display : flex;
+
+                    div:nth-of-type(2){
+                        position : absolute;
+                        right: $e;
+                    }
+                }
+            }
+        }
+        #islande{
+            display: block;
+        }
+        #norvege{
+            display : none;
+        }
+        #canada{
+            display : none;
+        }
+        #groenland{
+            display : none;
+        }
+    }
+    .actus{
+        h2{
+            @include fleche();
+        }
+        h3{
+            color : $bleu;
+        }
+        a{
+            color : $bleu;
+        }
+    }
+    .recits{
+        h2{
+            @include fleche();
+        }
+        h3{
+            color : $bleu;
+        }
+        a{
+            color : $bleu;
+        }
+    }
+    .article{
+        margin-bottom : $ge;
+
+        article{
+
+            h3{
+                margin-bottom : $e;
+                margin-top : $e;
+            }
+            a{
+                position : absolute;
+                right: $e;
+            }
+        }
+    }
+}
+.voir-plus{
+    margin-bottom : $ge;
+
+    a{
+        display : block;
+        margin : $a;
+    }
+}
+
+footer{
+    background-color:$bleu;
+    .footer{
+        padding-top : $ge;
+        padding-bottom : $ge;
+        max-width: 1200px;
+        margin : auto;
+        color : black;
+
+        .footer-section{
+            margin-bottom : 2em;
+        }
+
+        h4{
+            @include title-white-arrow();
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            color : black;
+
+            &:hover{
+                color : white;
+            }
+        }
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 570px) {
+body{
+    .container-img{
+        p{
+            position : relative;
+            bottom : 10em;
+            left : $e;
+        }
+    }
+}
+
+main{
+
+
+    .destination{
+        margin-bottom : -15em;
+        .dest-content{
+            margin-top : 10em;
+            a{
+                h3{
+                    width: 300px;
+                    height : 50px;
+                    margin : 0;
+                    padding : 0;
+                    padding-top : 0.4em;
+                    margin : $a;
+                    margin-top : $e;
+                    color : white;
+                    background-color : $bleu;
+                    text-align : center;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+
+                    &:hover{
+                        background-color: $bleu-c;
+                    }
+                }
+            }
+        }
+        .dest-link{
+
+            .dest-img{
+                img{
+                    display : none;
+                }
+            }
+        }
+    }
+}
+
+footer{
+
+    #footer-dest, #footer-sej{
+        display : none;
+    }
+    .footer-section{
+        width: 250px;
+        margin : $a;
+    }
+}
+
+}
+
+@media screen and (max-width: 1000px) {
+body{
+    .slide{
+
+        text-align : center;
+        margin : 0 $a;
+    }
+}
+header{
+    .nav-secondaire{
+        position : absolute;
+        top : -19em;
+
+        margin : auto;
+
+        li{
+            a{
+
+            }
+        }
+        li:nth-of-type(1){
+
+        }
+    }
+
+    .reseaux-sociaux{
+        p{
+            display : none;
+        }
+    }
+    .main-nav{
+
+        &::before{
+            content : "";
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin : 0 auto;
+            background: url('../../images-finales/icones/menu-icon.png');
+            background-color : $bleu-c;
+            position : absolute;
+            top : -13em;
+            right: 1em;
+        }
+
+        ul{
+            display: none;
+            position: absolute;
+            width: 50%;
+            border-radius : 5px;
+
+            li{
+                line-height: 200%;
+                a{
+                    text-align: right;
+                    color : white;
+                }
+            }
+        }
+
+        &:hover ul{
+            display : block;
+            position : absolute;
+            top : -18.5em;
+            right: 0;
+            background-color : $bleu-c;
+            z-index: 2;
+        }
+
+        .main-nav li a:link,
+        .main-nav li a:visited{
+            display:block;
+            padding:.5em 1.5em;
+            font-size:1em;
+            color:#e7ecf2;
+            text-transform:uppercase;
+        }
+        .main-nav li:hover a{
+            background:#18345B;
+        }
+    }
+}
+
+main{
+    .destination{
+        max-width: 800px;
+
+        .dest-link{
+            .dest-img{
+                max-width: 230px;
+                max-height : 230px;
+                margin-bottom : $e;
+            }
+        }
+    }
+}
+}

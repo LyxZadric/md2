@@ -1,0 +1,305 @@
+/*@font-face {
+font-family: 'bonveno';
+src: url('font/BonvenoCF-Light.otf') format('truetype');
+}*/
+@font-face {
+  font-family: "bonveno";
+  src: url("../../font/BonvenoCF-Light.otf"); }
+@font-face {
+  font-family: "copperplate";
+  src: url("../../font/Copperplate.ttc"); }
+body p, body a {
+  font-family: "bonveno"; }
+body h1, body h2, body h3 {
+  font-family: "copperplate"; }
+body .slide {
+  position: relative;
+  left: -100%; }
+body .slidebis {
+  position: relative;
+  left: 0; }
+body hr {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1em; }
+body .container-img {
+  padding: 0;
+  max-width: 600px;
+  margin: auto; }
+  body .container-img p {
+    width: 150px;
+    z-index: 2;
+    position: relative;
+    bottom: 16em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 0.5em;
+    border-radius: 5px; }
+
+.container-fluid {
+  max-width: 1200px; }
+
+header .logo {
+  margin: 4em 0 4em 1em;
+  max-width: 310px; }
+header .main-nav::before {
+  display: none; }
+header .main-nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: static; }
+header .main-nav:hover ul {
+  display: flex; }
+header .nav-secondaire {
+  font-size: 0.8em;
+  margin-top: 1em;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 1em; }
+  header .nav-secondaire li {
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1px solid black; }
+    header .nav-secondaire li a {
+      color: black; }
+  header .nav-secondaire li:nth-of-type(1) {
+    border-left: none; }
+header .nav-principale {
+  margin-top: 8em;
+  display: flex;
+  list-style: none;
+  position: absolute;
+  right: 1em; }
+  header .nav-principale li {
+    padding-left: 1em;
+    color: #3e8ede; }
+    header .nav-principale li a:hover {
+      color: #255f85; }
+header .reseaux-sociaux {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center; }
+  header .reseaux-sociaux .list-social {
+    display: flex;
+    list-style: none;
+    padding-left: 1em; }
+    header .reseaux-sociaux .list-social .img-reseaux {
+      margin-right: 0.5em;
+      width: 35px;
+      height: 35px; }
+
+main .destination {
+  margin: auto;
+  margin-top: 4em; }
+  main .destination h1 {
+    background: url("../../images-finales/icones/fleche.png") no-repeat;
+    padding-left: 1em;
+    margin-left: 0.7em;
+    margin-bottom: 2em; }
+  main .destination .dest-content {
+    margin: auto;
+    margin-bottom: 4em; }
+    main .destination .dest-content a {
+      text-decoration: none; }
+      main .destination .dest-content a:hover img {
+        filter: grayscale(1); }
+      main .destination .dest-content a img {
+        z-index: 1; }
+      main .destination .dest-content a h3 {
+        z-index: 2;
+        position: relative;
+        top: -8em;
+        color: #255f85;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5px 0 0 5px;
+        padding-left: 2em;
+        margin-left: 1em; }
+  main .destination .dest-link .dest-img {
+    margin: auto; }
+    main .destination .dest-link .dest-img img {
+      width: 230px;
+      height: 230px; }
+main .sejours-content {
+  margin-left: 1em;
+  margin-right: 1em; }
+  main .sejours-content h2 {
+    background: url("../../images-finales/icones/fleche.png") no-repeat;
+    padding-left: 1.5em;
+    margin-left: 0.5em;
+    margin-bottom: 2em;
+    font-size: 2.3em; }
+  main .sejours-content .sejour .sejour-article {
+    margin-bottom: 3em; }
+  main .sejours-content .sejour article h3 {
+    margin-bottom: 1em;
+    color: #255f85; }
+  main .sejours-content .sejour article a {
+    color: #255f85;
+    position: absolute;
+    right: 1em; }
+  main .sejours-content .sejour article section {
+    border-top: 1px solid #bfbfbf;
+    margin-top: 4em;
+    display: flex; }
+    main .sejours-content .sejour article section div:nth-of-type(2) {
+      position: absolute;
+      right: 1em; }
+  main .sejours-content #islande {
+    display: block; }
+  main .sejours-content #norvege {
+    display: none; }
+  main .sejours-content #canada {
+    display: none; }
+  main .sejours-content #groenland {
+    display: none; }
+main .actus h2 {
+  background: url("../../images-finales/icones/fleche.png") no-repeat;
+  padding-left: 1.5em;
+  margin-left: 0.5em;
+  margin-bottom: 2em;
+  font-size: 2.3em; }
+main .actus h3 {
+  color: #255f85; }
+main .actus a {
+  color: #255f85; }
+main .recits h2 {
+  background: url("../../images-finales/icones/fleche.png") no-repeat;
+  padding-left: 1.5em;
+  margin-left: 0.5em;
+  margin-bottom: 2em;
+  font-size: 2.3em; }
+main .recits h3 {
+  color: #255f85; }
+main .recits a {
+  color: #255f85; }
+main .article {
+  margin-bottom: 4em; }
+  main .article article h3 {
+    margin-bottom: 1em;
+    margin-top: 1em; }
+  main .article article a {
+    position: absolute;
+    right: 1em; }
+
+.voir-plus {
+  margin-bottom: 4em; }
+  .voir-plus a {
+    display: block;
+    margin: auto; }
+
+footer {
+  background-color: #255f85; }
+  footer .footer {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    max-width: 1200px;
+    margin: auto;
+    color: black; }
+    footer .footer .footer-section {
+      margin-bottom: 2em; }
+    footer .footer h4 {
+      background: url("../../images-finales/icones/fleche-blanche.png") no-repeat;
+      background-position: left center;
+      padding-left: 1em;
+      margin-bottom: 1em;
+      color: white; }
+    footer .footer li {
+      list-style: none; }
+    footer .footer a {
+      color: black; }
+      footer .footer a:hover {
+        color: white; }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 570px) {
+  body .container-img p {
+    position: relative;
+    bottom: 10em;
+    left: 1em; }
+
+  main .destination {
+    margin-bottom: -15em; }
+    main .destination .dest-content {
+      margin-top: 10em; }
+      main .destination .dest-content a h3 {
+        width: 300px;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        padding-top: 0.4em;
+        margin: auto;
+        margin-top: 1em;
+        color: white;
+        background-color: #255f85;
+        text-align: center;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px; }
+        main .destination .dest-content a h3:hover {
+          background-color: #3e8ede; }
+    main .destination .dest-link .dest-img img {
+      display: none; }
+
+  footer #footer-dest, footer #footer-sej {
+    display: none; }
+  footer .footer-section {
+    width: 250px;
+    margin: auto; } }
+@media screen and (max-width: 1000px) {
+  body .slide {
+    text-align: center;
+    margin: 0 auto; }
+
+  header .nav-secondaire {
+    position: absolute;
+    top: -19em;
+    margin: auto; }
+  header .reseaux-sociaux p {
+    display: none; }
+  header .main-nav::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: url("../../images-finales/icones/menu-icon.png");
+    background-color: #3e8ede;
+    position: absolute;
+    top: -13em;
+    right: 1em; }
+  header .main-nav ul {
+    display: none;
+    position: absolute;
+    width: 50%;
+    border-radius: 5px; }
+    header .main-nav ul li {
+      line-height: 200%; }
+      header .main-nav ul li a {
+        text-align: right;
+        color: white; }
+  header .main-nav:hover ul {
+    display: block;
+    position: absolute;
+    top: -18.5em;
+    right: 0;
+    background-color: #3e8ede;
+    z-index: 2; }
+  header .main-nav .main-nav li a:link,
+  header .main-nav .main-nav li a:visited {
+    display: block;
+    padding: .5em 1.5em;
+    font-size: 1em;
+    color: #e7ecf2;
+    text-transform: uppercase; }
+  header .main-nav .main-nav li:hover a {
+    background: #18345B; }
+
+  main .destination {
+    max-width: 800px; }
+    main .destination .dest-link .dest-img {
+      max-width: 230px;
+      max-height: 230px;
+      margin-bottom: 1em; } }
+
+/*# sourceMappingURL=style.css.map */

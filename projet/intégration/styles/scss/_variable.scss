@@ -1,0 +1,38 @@
+$bleu : #255f85;
+$bleu-c : #3e8ede;
+$gris : #bfbfbf;
+
+$e : 1em;
+$ge : 4em;
+
+$border-g : 1px solid $gris;
+$border-w : 1px solid white;
+
+
+$l : left;
+$r : right;
+$b : bottom;
+$t : top;
+
+$c : center;
+$a : auto;
+
+$cinq : 500px;
+$deuxT : 230px;
+$deuxC : 250px;
+
+@mixin fleche(){
+    background : url("../../images-finales/icones/fleche.png") no-repeat;
+    padding-left : 1.5em;
+    margin-left : 0.5em;
+    margin-bottom : $ge/2;
+    font-size : 2.3em;
+}
+
+@mixin title-white-arrow(){
+    background : url("../../images-finales/icones/fleche-blanche.png") no-repeat;
+    background-position : left center;
+    padding-left : $e;
+    margin-bottom : $e;
+    color : white;
+}

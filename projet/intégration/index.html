@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Arctrek</title>
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="styles/css/bootstrap.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <header>
+            <!-- logo + navigation principale et secondaire-->
+            <div class="row">
+                <div class="col-4-md col-lg-4 col-sm-12 col-xs-12 logo-container">
+                    <img src="images-finales/logo.png" alt="paysage" class="logo">
+                </div>
+                <div class="col-8-md col-lg-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <ul class="nav-secondaire">
+                            <li><a href="#">Newsletter</a></li>
+                            <li><a href="#">Brochure</a></li>
+                            <li><a href="#">Espace Clients</a></li>
+                            <li><a href="#">Panier(0)</a></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row">
+                        <nav class="main-nav">
+                            <ul class="nav-principale">
+                                <li><a href="#">Accueil</a></li>
+                                <li><a href="#">Nos destinations</a></li>
+                                <li><a href="#">Nos séjours</a></li>
+                                <li><a href="#">Le blog</a></li>
+                                <li><a href="#">A propos</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image header -->
+            <div class="row">
+                <div class="col">
+                    <img src="images-finales/Image-header.jpg" alt="paysage" class="img-fluid">
+                </div>
+            </div>
+
+            <!-- Barre réseaux sociaux -->
+            <div class="row">
+                <div class="col reseaux-sociaux">
+                    <p>Retrouvez-nous sur :</p>
+                    <ul class="list-social">
+                        <li><a href="#" class="hidden-text">
+                            <img src="images-finales/icones/face2.png" alt="" class="img-fluid img-reseaux">
+                        </a></li>
+                        <li><a href="#" class="hidden-text">
+                            <img src="images-finales/icones/twit2.png" alt="" class="img-fluid img-reseaux">
+                        </a></li>
+                        <li><a href="#" class="hidden-text">
+                            <img src="images-finales/icones/insta2.png" alt="" class="img-fluid img-reseaux">
+                        </a></li>
+                        <li><a href="#" class="hidden-text">
+                            <img src="images-finales/icones/face2.png" alt="" class="img-fluid img-reseaux">
+                        </a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Destinations ------------------------------------------------------------>
+            <div class="row destination">
+                <div class="row">
+                    <h1>Nos destinations et séjours</h1>
+                </div>
+
+                <div class="row dest-content" id="dest-content">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a id="is" class="dest-link" href="#dest-content">
+                            <section class="dest-islande">
+                                <div class="dest-img">
+                                    <img src="images-finales/destinations/islande.jpg" alt="paysage-islande">
+                                    <h3>Islande</h3>
+                                </div>
+                            </section>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a id="no" class="dest-link" href="#dest-content">
+                            <section class="dest-norvege">
+                                <div class="dest-img">
+                                    <img src="images-finales/destinations/norvege.jpg" alt="paysage-norvege">
+                                    <h3>Norvège</h3>
+                                </div>
+
+                            </section>
+                        </a>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a id="ca" class="dest-link" href="#dest-content">
+                            <section class="dest-canada">
+                                <div class="dest-img">
+                                    <img src="images-finales/destinations/canada.jpg" alt="paysage-canada">
+                                    <h3>Canada</h3>
+                                </div>
+
+                            </section>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <a id="gro" class="dest-link" href="#dest-content">
+                            <section class="dest-groenland">
+                                <div class="dest-img">
+                                    <img src="images-finales/destinations/groenland.jpg" alt="paysage-groenland">
+                                    <h3>Groenland</h3>
+                                </div>
+
+                            </section>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Séjours / pays --------------------------------------------------------->
+            <section class="sejours-content">
+
+                <!-- islande séjours-->
+                <div class="row">
+                    <div class="sejour" id="islande">
+                        <div class="row">
+                            <h2>Séjours en Islande</h2>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/aurore.jpg" alt="" class="img-fluid slide" id="slide1">
+                                    <p>Coup de coeur</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Traqueur d'aurores - Islande</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 27/08/2017
+                                                <p>
+                                                    <p class="difficult1">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>8 Jours</p>
+                                            <p> 1599€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/contemplation.jpg" alt="" class="img-fluid slide" id="slide2">
+                                    <p>Le mieux noté</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Contemplation islandaise - Islande</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 15/08/2017
+                                                <p>
+                                                    <p class="difficult2">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>14 Jours</p>
+                                            <p> 3250€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row voir-plus">
+                            <hr>
+                            <a href="">Voir plus de séjours en Islande</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- norvege séjours-->
+                <div class="row">
+                    <div class="sejour" id="norvege">
+                        <div class="row">
+                            <h2>Séjours en Norvège</h2>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/terredeglace.jpg" alt="" class="img-fluid slide slidebis">
+                                    <p>Coup de coeur</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Terre de glace - Norvège</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 01/06/2017
+                                                <p>
+                                                    <p class="difficult1">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>7 Jours</p>
+                                            <p>1500€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/fjords.jpg" alt="" class="img-fluid slide slidebis">
+                                    <p>Le mieux noté</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Fjords et merveilles des parcs nationaux - Norvège</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 18/07/2017
+                                                <p>
+                                                    <p class="difficult2">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>21 Jours</p>
+                                            <p> 5000€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row voir-plus">
+                            <hr>
+                            <a href="#">Voir plus de séjours en Norvège</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- canada séjours -->
+                <div class="row">
+                    <div class="sejour" id="canada">
+                        <div class="row">
+                            <h2>Séjours au Canada</h2>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/immersion-nature.jpg" alt="" class="img-fluid slide slidebis">
+                                    <p>Coup de coeur</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Immersion nature - Canada</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 06/05/2017
+                                                <p>
+                                                    <p class="difficult1">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>10 Jours</p>
+                                            <p>2300€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/canada-sej2.jpg" alt="" class="img-fluid slide slidebis">
+                                    <p>Le mieux noté</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Escapade au québec - Canada</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 29/05/2017
+                                                <p>
+                                                    <p class="difficult2">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>11 Jours</p>
+                                            <p>3000€</p>
+                                        </div>
+                                    </section>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="row voir-plus">
+                            <hr>
+                            <a href="">Voir plus de séjours au Canada</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- groenland séjours -->
+                <div class="row">
+                    <div class="sejour" id="groenland">
+                        <div class="row">
+                            <h2>Séjours au Groenland</h2>
+                        </div>
+                        <div class="row sejour-article">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="container-img">
+                                    <img src="images-finales/sejours/routedesiceberg.jpg" alt="" class="img-fluid slide slidebis">
+                                    <p>Coup de coeur</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <article>
+                                    <h3>Route des iceberg - Groenland</h3>
+                                    <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                        odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus.</p>
+                                    <a href="#">En lire plus ...</a>
+
+                                    <section>
+                                        <div>
+                                            <p>Prochain départ : 27/06/2017
+                                                <p>
+                                                    <p class="difficult1">Difficulté :</p>
+                                        </div>
+                                        <div>
+                                            <p>20 Jours</p>
+                                            <p> 5700€</p>
+                                        </div>
+                                    </section>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="row voir-plus">
+                            <hr>
+                            <a href="#">Voir plus de séjours au Groenland</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACTUS ---------------------------------------------------------->
+            <section class="actus">
+                <div class="row">
+                    <h2>ACTUS</h2>
+                </div>
+                <div class="row article">
+                    <div class="col-lg-6 col-md-12 col-sm-12 container-img">
+                        <img src="images-finales/actus/actu1.jpg" alt="" class="img-fluid slide" id="slide3">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <article>
+                            <h3>QAASUITSUP, PLUS GRANDE COMMUNE DU MONDE</h3>
+                            <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus, in euismod nisi ultricies. Vivamus ut interdum velit. Donec molestie, nulla quis
+                                faucibus accumsan, turpis libero porta urna, vel pretium ex ex molestie mi.</p>
+                            <a href="#">En lire plus ...</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="row article">
+                    <div class="col-lg-6 col-md-12 col-sm-12 container-img">
+                        <img src="images-finales/actus/expo.jpg" alt="" class="img-fluid slide" id="slide4">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <article>
+                            <h3>L'EXPOSITION ANTARTICA, À LYON JUSQU'A LA FIN DE L'ANNÉE</h3>
+                            <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus, in euismod nisi ultricies. Vivamus ut interdum velit. Donec molestie, nulla quis
+                                faucibus accumsan, turpis libero porta urna, vel pretium ex ex molestie mi.</p>
+                            <a href="#">En lire plus ...</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="row voir-plus">
+                    <hr>
+                    <a href="#"> Lire plus d'actus </a>
+                </div>
+            </section>
+
+            <!-- RECITS DE VOYAGES --------------------------------------------------->
+            <section class="recits">
+                <div class="row">
+                    <h2>VOS RÉCITS DE VOYAGE</h2>
+                </div>
+                <div class="row article">
+                    <div class="col-md-6 col-sm-12 container-img">
+                        <img src="images-finales/recits/terre-hautes.jpg" alt="" class="img-fluid slide" id="slide5">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <article>
+                            <h3>LAISSEZ-MOI VOUS CONTER L'ISLANDE DES HAUTES TERRES</h3>
+                            <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus, in euismod nisi ultricies. Vivamus ut interdum velit. Donec molestie, nulla quis
+                                faucibus accumsan, turpis libero porta urna, vel pretium ex ex molestie mi.</p>
+                            <a href="#">En lire plus ...</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="row article">
+                    <div class="col-md-6 col-sm-12 container-img">
+                        <img src="images-finales/recits/roadtrip.jpg" alt="" class="img-fluid slide" id="slide6">
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <article>
+                            <h3>ROADTRIP EN NORVÈGE</h3>
+                            <p>Morbi tempus felis nec odio lacinia, gravida faucibus odio varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam vel nisi condimentum, sollicitudin diam quis, ullamcorper
+                                odio. Integer blandit, purus ut mollis feugiat, risus sem rutrum justo, vitae posuere est dolor at turpis. Sed finibus eros ac diam tempus, in euismod nisi ultricies. Vivamus ut interdum velit. Donec molestie, nulla quis
+                                faucibus accumsan, turpis libero porta urna, vel pretium ex ex molestie mi.</p>
+                            <a href="#">En lire plus ...</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="row voir-plus">
+                    <hr>
+                    <a href="#">Lire plus de récits de voyage</a>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+        <footer>
+            <div class="row footer">
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-section" id="footer-dest">
+                    <h4>Nos destinations</h4>
+                    <ul>
+                        <li><a href="#">Islande</a></li>
+                        <li><a href="#">Norvège</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">Groenland</a></li>
+                    </ul>
+                    <h4>Certification </h4>
+                    <p>Arctrek est certifié Agir pour un tourisme responsable</p>
+                    <img src="images-finales/icones/atr-tourisme.png" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-section" id="footer-sej">
+                    <h4>Nos séjours</h4>
+                    <ul>
+                        <li><a href="#">Traqeur d'aurores</a></li>
+                        <li><a href="#">Contemplation islandaise</a></li>
+                        <li><a href="#">L'âme islandaise</a></li>
+                        <li><a href="#">Terre de feu</a></li>
+                        <li><a href="#">Boucle islandaise</a></li><br>
+                        <li><a href="#">Les îles lofoten</a></li>
+                        <li><a href="#">Terres de glace</a></li>
+                        <li><a href="#">Fjords et merveilles des parcs nationaux</a></li><br>
+                        <li><a href="#">Immersion nature</a></li>
+                        <li><a href="#">Escapade au québec</a></li><br>
+                        <li><a href="#">La route des iceberg</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-section">
+
+                    <h4>Nous contacter</h4>
+
+                    <p>Tél. +33 2 38 39 36 81</p>
+                    <p>Contact@arctrek.com</p>
+                    <hr>
+                    <h4>Infos</h4>
+
+                    <ul>
+                        <li><a href="">A propos</a></li>
+                        <li><a href="">Brochure</a></li>
+                        <li><a href="">Mentions légales</a></li>
+                        <li><a href="">Copyright</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 footer-section">
+                    <h4>Newsletter</h4>
+
+                    <input type="email" value="e-mail">
+                    <input type="submit" value="ok">
+                    <hr>
+
+                    <h4>Réseaux sociaux</h4>
+
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Youtube</a></li>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Le blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="plugins.js"></script>
+</body>
+
+</html>
