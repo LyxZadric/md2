@@ -1,0 +1,22 @@
+main{
+    display : flex;
+
+    article{
+        order : 2;
+        margin-left : 20%;
+
+        input{
+            display : block;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    aside{
+        order: 1;
+
+        .hero{
+            display : none;
+        }
+
+    }
+}
