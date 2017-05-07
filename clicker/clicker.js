@@ -1,11 +1,11 @@
-    var lvl = 1;
-    var nbmob = 0;
+    var lvl = 4;
+    var nbmob = 10;
     var hp = 10;
     var prix = 0;
     var or = 1;
     var score = 0;
     var dps = 0;
-    var click = 1;
+    var click = 20;
     var vie = 0;
 //VARIABLES HERO 1 - Tableau à utiliser pour l'amélioration du code
     var lvlhero1 = 0;
@@ -175,26 +175,50 @@
         $("#monster").click(function(){
 
             vie = vie - click;
-
-            if(vie <= 0 && nbmob < 10){
-              score = score + or * lvl;
-              nbmob = nbmob + 1;
-              vie = hp * lvl;
-
-              $(".or").html("Nb pièces d'or : " + score);
-              $("#mobkill").html("Monstres tués : " + nbmob + "/10");
-            }
-            else if(vie <= 0 && nbmob > 9){
-                score = score + or * lvl * 10;
-                nbmob = 0;
-                lvl = lvl + 1;
+            if(lvl % 5 != 0){
+              if(vie <= 0 && nbmob < 10){
+                score = score + or * lvl;
+                nbmob = nbmob + 1;
                 vie = hp * lvl;
+                $(".or").html("Nb pièces d'or : " + score);
+                $("#mobkill").html("Monstres tués : " + nbmob + "/10");
 
-                affiche();
+              } else if(vie <= 0 && nbmob > 9){
+                  score = score + or * lvl * 10;
+                  nbmob = 0;
+                  lvl = lvl + 1;
+                  vie = hp * lvl;
+
+                  affiche();
+
+              } else{
+                  affiche();
+              }
+
+
+            } else {
+                vie = hp * lvl * 20;
+                var compteur = 30;
+                var clock = null;
+
+               function count(){
+                 $("#timeToKill").css("display", "block").html(compteur + " s");
+                 compteur = compteur - 1;
+               }
+
+               clock = setInterval(function(){
+                 count()
+               }, 1000);
+
+               setTimeout(function(){
+
+
+              
+                  clearInterval(clock);
+               }, compteur * 1000);
+
             }
-            else{
-                affiche();
-            }
+
             afficheHero();
             afficheDamage();
         });
@@ -224,5 +248,3 @@
         afficheDamage();
     });
     affiche();
-
-  
