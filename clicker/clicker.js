@@ -3,7 +3,7 @@
     var hp = 10;
     var prix = 0;
     var or = 1;
-    var score = 50;
+    var score = 0;
     var dps = 0;
     var click = 1;
     var vie = 0;
@@ -13,6 +13,16 @@
 // VARIABLES HERO 2
     var lvlhero2 = 0;
     var costh2 = 50;
+// VARIABLES HERO 3
+    var lvlhero3 = 0;
+    var costh3 = 250;
+// VARIABLES HERO 4
+    var lvlhero4 = 0;
+    var costh4 = 1000;
+// VARIABLES HERO 5
+    var lvlhero5 = 0;
+    var costh5 = 4000;
+
 
     hp = hp * lvl;
 
@@ -21,10 +31,10 @@
                 if(score == 5){
                     $("#hero1").css("display", "block");
                     afficheInfoHero("1");
-                } else if(score == 50){
+                } else if(score == 30){
                     $("#hero2").css("display", "block");
                     afficheInfoHero("2");
-                } else if(score == 80){
+                } else if(score == 100){
                     $("#hero3").css("display", "block");
                       afficheInfoHero("3");
                 } else if(score == 250){
@@ -46,20 +56,20 @@
               $("#prix-hero1").html("prix-hero1 : " + costh1);
             }
             else if(iH == "2"){
-              $("#lvluphero2").html("Niveau : " + lvlhero1);
-              $("#prix-hero2").html("prix-hero2 : " + costh1);
+              $("#lvl-hero2").html("Niveau : " + lvlhero2);
+              $("#prix-hero2").html("prix-hero2 : " + costh2);
             }
             else if(iH == "3"){
-              $("#lvl-hero3").html("Niveau : " + lvlhero1);
-              $("#prix-hero3").html("prix-hero3 : " + costh1);
+              $("#lvl-hero3").html("Niveau : " + lvlhero3);
+              $("#prix-hero3").html("prix-hero3 : " + costh3);
             }
             else if(iH == "4"){
-              $("#lvl-hero4").html("Niveau : " + lvlhero1);
-              $("#prix-hero4").html("prix-hero4 : " + costh1);
+              $("#lvl-hero4").html("Niveau : " + lvlhero4);
+              $("#prix-hero4").html("prix-hero4 : " + costh4);
             }
             else if(iH == "5"){
-              $("#lvl-hero5").html("Niveau : " + lvlhero1);
-              $("#prix-hero5").html("prix-hero5 : " + costh1);
+              $("#lvl-hero5").html("Niveau : " + lvlhero5);
+              $("#prix-hero5").html("prix-hero5 : " + costh5);
             }
             else{
               console.log("Error : afficheInfoHero");
@@ -90,14 +100,42 @@
                 afficheInfoHero("1");
                 affiche();
             } else if(h == "2" && score >= costh2){
-              console.log("else if function hero");
-              lvlhero2 = lvlhero2 + 1;
-              dps = dps + 1;
-              score = score - costh2;
-              costh2 = costh2 + 3;
-              afficheInfoHero("2");
-              affiche();
+                console.log("else if function hero");
+                lvlhero2 = lvlhero2 + 1;
+                dps = dps + 1;
+                score = score - costh2;
+                costh2 = costh2 + 20;
+                afficheInfoHero("2");
+                affiche();
+            } else if(h == "3" && score >= costh3){
+                console.log("else if function hero");
+                lvlhero3 = lvlhero3 + 1;
+                dps = dps + 5;
+                score = score - costh3;
+                costh3 = costh3 + 80;
+                afficheInfoHero("3");
+                affiche();
+            } else if(h == "4" && score >= costh4){
+                console.log("else if function hero");
+                lvlhero4 = lvlhero4 + 1;
+                dps = dps + 10;
+                score = score - costh4;
+                costh4 = costh4 + 330;
+                afficheInfoHero("4");
+                affiche();
+            } else if(h == "5" && score >= costh5){
+                console.log("else if function hero");
+                lvlhero5 = lvlhero5 + 1;
+                dps = dps + 1;
+                score = score - costh5;
+                costh5 = costh5 + 1300;
+                afficheInfoHero("5");
+                affiche();
+            } else {
+              console.log("Error : hero()");
             }
+
+
 
         }
 
@@ -147,7 +185,7 @@
               $("#mobkill").html("Monstres tués : " + nbmob + "/10");
             }
             else if(vie <= 0 && nbmob > 9){
-                score = score + or * lvl + 10;
+                score = score + or * lvl * 10;
                 nbmob = 0;
                 lvl = lvl + 1;
                 vie = hp * lvl;
@@ -186,3 +224,5 @@
         afficheDamage();
     });
     affiche();
+
+  
