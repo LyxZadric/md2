@@ -1,11 +1,11 @@
-    var lvl = 4;
-    var nbmob = 10;
+    var lvl = 1;
+    var nbmob = 0;
     var hp = 10;
     var prix = 0;
     var or = 1;
-    var score = 0;
+    var score = 30;
     var dps = 0;
-    var click = 20;
+    var click = 1;
     var vie = 0;
 //VARIABLES HERO 1 - Tableau à utiliser pour l'amélioration du code
     var lvlhero1 = 0;
@@ -25,6 +25,15 @@
 
 
     hp = hp * lvl;
+        function afficheGeneral(){
+            setInterval(function(){
+              $(".or").html("Nb pièces d'or : " + score);
+              $(".affichage").html("HP : " + vie);
+              $("#mobkill").html("Monstres tués : " + nbmob + "/10");
+              $("#niveau").html("niveau " + lvl);
+            }, 100);
+        }
+        afficheGeneral();
 
         function afficheHero(){
 
@@ -81,14 +90,14 @@
           $("#damage-click").html("Dommages par click : " + click);
           $("#dps").html("DPS : " + dps);
         }
-
+/*
         function affiche(){
             $(".or").html("Nb pièces d'or : " + score);
             $(".affichage").html("HP : " + vie);
             $("#mobkill").html("Monstres tués : " + nbmob + "/10");
             $("#niveau").html("niveau " + lvl);
         }
-
+*/
         var h;
         function hero(h){
             console.log("function hero");
@@ -139,90 +148,66 @@
 
         }
 
-    function monster(){
-        vie = hp * lvl;
-
-        setInterval(function(){
-          vie = vie - dps;
-          console.log(vie);
-
-          $(".affichage").html("HP : " + vie);
-
-          if(vie <= 0 && nbmob < 10){
-            score = score + or * lvl;
-            nbmob = nbmob + 1;
+        function monster(){
             vie = hp * lvl;
 
-            $(".or").html("Nb pièces d'or : " + score);
-            $("#mobkill").html("Monstres tués : " + nbmob + "/10");
-          }
-          else if(vie <= 0 && nbmob > 9){
-              score = score + or * lvl + 10;
-              nbmob = 0;
-              lvl = lvl + 1;
-              vie = hp * lvl;
+            setInterval(function(){
+              vie = vie - dps;
+              console.log(vie);
 
-              affiche();
-          }
-          else{
-              affiche();
-          }
-          afficheHero();
-          afficheDamage();
+              $(".affichage").html("HP : " + vie);
 
-        }, 1000);
-
-        $("#monster").click(function(){
-
-            vie = vie - click;
-            if(lvl % 5 != 0){
               if(vie <= 0 && nbmob < 10){
                 score = score + or * lvl;
                 nbmob = nbmob + 1;
                 vie = hp * lvl;
+
                 $(".or").html("Nb pièces d'or : " + score);
                 $("#mobkill").html("Monstres tués : " + nbmob + "/10");
-
-              } else if(vie <= 0 && nbmob > 9){
-                  score = score + or * lvl * 10;
+              }
+              else if(vie <= 0 && nbmob > 9){
+                  score = score + or * lvl + 10;
                   nbmob = 0;
                   lvl = lvl + 1;
                   vie = hp * lvl;
 
                   affiche();
-
-              } else{
+              }
+              else{
                   affiche();
               }
+              afficheHero();
+              afficheDamage();
 
+            }, 1000);
 
-            } else {
-                vie = hp * lvl * 20;
-                var compteur = 30;
-                var clock = null;
+            $("#monster").click(function(){
 
-               function count(){
-                 $("#timeToKill").css("display", "block").html(compteur + " s");
-                 compteur = compteur - 1;
-               }
+                  vie = vie - click;
+                  if(vie <= 0 && nbmob < 10){
+                    score = score + or * lvl;
+                    nbmob = nbmob + 1;
+                    vie = hp * lvl;
+                    $(".or").html("Nb pièces d'or : " + score);
+                    $("#mobkill").html("Monstres tués : " + nbmob + "/10");
 
-               clock = setInterval(function(){
-                 count()
-               }, 1000);
+                  } else if(vie <= 0 && nbmob > 9){
+                      score = score + or * lvl + 10;
+                      nbmob = 0;
+                      lvl = lvl + 1;
+                      vie = hp * lvl;
 
-               setTimeout(function(){
+                      affiche();
 
+                  } else{
+                      affiche();
+                  }
 
-              
-                  clearInterval(clock);
-               }, compteur * 1000);
+                afficheHero();
+                afficheDamage();
+            });
+        }
 
-            }
-
-            afficheHero();
-            afficheDamage();
-        });
-    }
 
 
 
