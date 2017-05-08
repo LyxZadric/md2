@@ -1,4 +1,43 @@
+function modulo(){
 
+}
+
+
+if(lvl % 5 == 0){
+  console.log("niveau5");
+    vie = hp * lvl * 20;
+    var compteur = 0;
+
+    var stI = setInterval(function(){}, 1000);
+        console.log("interval");
+          $("#monster").click(function(){
+              vie = vie - click;
+          });
+          if(vie <= 0){
+            clearInterval(stI);
+          } else if(compteur == 30){
+            clearInterval(stI);
+          }
+          else {}
+          compteur++;
+          console.log(compteur);
+          $("#timeToKill").html(compteur + " s");
+
+    }, 1000);
+
+    /*if(compteur => 30 && vie > 0){
+        lvl = lvl - 1;
+        nbmob = 0;
+    } else */if(vie <= 0){
+        lvl = lvl + 1;
+        score = score + or * lvl * 100;
+        nbmob = 0;
+    } else{}
+
+    console.log("time-out");
+}
+
+// ---------------------------------------------------------------------//
 else {
     vie = hp * lvl * 20;
     var compteur = 30;
@@ -21,47 +60,140 @@ else {
    }, compteur * 1000);
 
 }
+// ---------------------------------------------------------------------//
+// ---------------------------------------------------------------------//
 
-afficheHero();
-afficheDamage();
-});
-function afficheDamage(){
-  $("#damage-click").html("Dommages par click : " + click);
-  $("#dps").html("DPS : " + dps);
+function monster(){
+
+    if(lvl % 5 == 0){
+      vie = hp * lvl * 20;
+      var compteur = 0;
+
+      var stI = setInterval(function(){
+
+        setInterval(function(){
+          vie = vie - dps;
+        }, 1000);
+
+        $("#monster").click(function(){
+              vie = vie - click;
+        });
+
+        if(vie <= 0){
+          score = score + or * lvl * 10;
+          nbmob = 0;
+          lvl = lvl + 1;
+          clearInterval(stI);
+
+        } else if(compteur >= 30){
+          lvl = lvl - 1;
+          clearInterval(stI);
+        }
+        else {
+          console.log("Error : Niveau 5");
+        }
+
+        compteur++;
+        console.log(compteur);
+        $("timeToKill").css("display", "block");
+      }, 1000);
+// ---------------------------------------------------------------------//
+    }else {
+      vie = hp * lvl;
+      setInterval(function(){
+        vie = vie - dps;
+
+        $(".affichage").html("HP : " + vie);
+
+        if(vie <= 0 && nbmob < 10){
+          score = score + or * lvl;
+          nbmob = nbmob + 1;
+          vie = hp * lvl;
+
+        }
+        else if(vie <= 0 && nbmob > 9){
+            score = score + or * lvl + 10;
+            nbmob = 0;
+            lvl = lvl + 1;
+            vie = hp * lvl;
+
+        }
+        else{
+
+        }
+
+      }, 1000);
+
+      $("#monster").click(function(){
+
+            vie = vie - click;
+
+            if(vie <= 0 && nbmob < 10){
+              score = score + or * lvl;
+              nbmob = nbmob + 1;
+              vie = hp * lvl;
+
+            } else if(vie <= 0 && nbmob > 9){
+                score = score + or * lvl + 10;
+                nbmob = 0;
+                lvl = lvl + 1;
+                vie = hp * lvl;
+
+            } else{
+
+            }
+      });
+    }
 }
 
-function affiche(){
-    $(".or").html("Nb pièces d'or : " + score);
-    $(".affichage").html("HP : " + vie);
-    $("#mobkill").html("Monstres tués : " + nbmob + "/10");
-    $("#niveau").html("niveau " + lvl);
-}
 
-var iH;
-function afficheInfoHero(iH){
 
-    if(iH == "1"){
-      $("#lvl-hero1").html("Niveau : " + lvlhero1);
-      $("#prix-hero1").html("prix-hero1 : " + costh1);
-    }
-    else if(iH == "2"){
-      $("#lvl-hero2").html("Niveau : " + lvlhero2);
-      $("#prix-hero2").html("prix-hero2 : " + costh2);
-    }
-    else if(iH == "3"){
-      $("#lvl-hero3").html("Niveau : " + lvlhero3);
-      $("#prix-hero3").html("prix-hero3 : " + costh3);
-    }
-    else if(iH == "4"){
-      $("#lvl-hero4").html("Niveau : " + lvlhero4);
-      $("#prix-hero4").html("prix-hero4 : " + costh4);
-    }
-    else if(iH == "5"){
-      $("#lvl-hero5").html("Niveau : " + lvlhero5);
-      $("#prix-hero5").html("prix-hero5 : " + costh5);
-    }
-    else{
-      console.log("Error : afficheInfoHero");
-    }
+
+function monster(){
+
+    vie = hp * lvl;
+    setInterval(function(){
+      vie = vie - dps;
+
+      $(".affichage").html("HP : " + vie);
+
+      if(vie <= 0 && nbmob < 10){
+        score = score + or * lvl;
+        nbmob = nbmob + 1;
+        vie = hp * lvl;
+
+      }
+      else if(vie <= 0 && nbmob > 9){
+          score = score + or * lvl + 10;
+          nbmob = 0;
+          lvl = lvl + 1;
+          vie = hp * lvl;
+
+      }
+      else{
+
+      }
+
+    }, 1000);
+
+    $("#monster").click(function(){
+
+          vie = vie - click;
+
+          if(vie <= 0 && nbmob < 10){
+            score = score + or * lvl;
+            nbmob = nbmob + 1;
+            vie = hp * lvl;
+
+          } else if(vie <= 0 && nbmob > 9){
+              score = score + or * lvl + 10;
+              nbmob = 0;
+              lvl = lvl + 1;
+              vie = hp * lvl;
+
+          } else{
+
+          }
+    });
 
 }

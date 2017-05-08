@@ -1,12 +1,13 @@
-    var lvl = 1;
-    var nbmob = 0;
+    var lvl = 4;
+    var nbmob = 10;
     var hp = 10;
     var prix = 0;
     var or = 1;
     var score = 100;
     var dps = 0;
-    var click = 1;
+    var click = 20;
     var vie = 0;
+    var compteur = 0;
 //VARIABLES HERO 1 - Tableau à utiliser pour l'amélioration du code
     var lvlhero1 = 0;
     var costh1 = 5;
@@ -50,6 +51,8 @@
 
               $("#lvl-hero5").html("Niveau : " + lvlhero5);
               $("#prix-hero5").html("prix-hero5 : " + costh5);
+
+              $("#timeToKill").html(compteur + " s");
 
               afficheHero();
         }
@@ -121,54 +124,94 @@
         }
 
         function monster(){
-            vie = hp * lvl;
+            console.log(lvl % 5);
+            if(lvl % 5 == 0){
 
-            setInterval(function(){
-              vie = vie - dps;
+              vie = hp * lvl * 20;
 
-              $(".affichage").html("HP : " + vie);
+              var stI = setInterval(function(){
+                $("#timeToKill").css("display", "block");
 
-              if(vie <= 0 && nbmob < 10){
-                score = score + or * lvl;
-                nbmob = nbmob + 1;
-                vie = hp * lvl;
+                setInterval(function(){
+                  vie = vie - dps;
+                }, 1000);
 
-              }
-              else if(vie <= 0 && nbmob > 9){
-                  score = score + or * lvl + 10;
+                $("#monster").click(function(){
+                    vie = vie - click;
+                });
+
+                if(vie <= 0){
+                  score = score + or * lvl * 10;
                   nbmob = 0;
                   lvl = lvl + 1;
+                  $("#timeToKill").css("display", "none");
+                  clearInterval(stI);
+
+                } else if(compteur >= 30){
+                  lvl = lvl - 1;
+                  $("#timeToKill").css("display", "none");
+                  clearInterval(stI);
+                }
+                else {
+                  console.log("Error : Niveau 5");
+                }
+
+                compteur++;
+                console.log(compteur);
+
+              }, 1000);
+
+        // ---------------------------------------------------------------------//
+        // ---------------------------------------------------------------------//
+            }else {
+              vie = hp * lvl;
+              setInterval(function(){
+                vie = vie - dps;
+
+                $(".affichage").html("HP : " + vie);
+
+                if(vie <= 0 && nbmob < 10){
+                  score = score + or * lvl;
+                  nbmob = nbmob + 1;
                   vie = hp * lvl;
-
-              }
-              else{
-
-              }
-
-            }, 1000);
-
-            $("#monster").click(function(){
-
-                  vie = vie - click;
-                  if(vie <= 0 && nbmob < 10){
-                    score = score + or * lvl;
-                    nbmob = nbmob + 1;
+                  monster();
+                }
+                else if(vie <= 0 && nbmob > 9){
+                    score = score + or * lvl + 10;
+                    nbmob = 0;
+                    lvl = lvl + 1;
                     vie = hp * lvl;
+                    monster();
+                }
+                else{
 
-                  } else if(vie <= 0 && nbmob > 9){
-                      score = score + or * lvl + 10;
-                      nbmob = 0;
-                      lvl = lvl + 1;
+                }
+
+              }, 1000);
+
+              $("#monster").click(function(){
+
+                    vie = vie - click;
+
+                    if(vie <= 0 && nbmob < 10){
+                      score = score + or * lvl;
+                      nbmob = nbmob + 1;
                       vie = hp * lvl;
+                      monster();
 
-                  } else{
+                    } else if(vie <= 0 && nbmob > 9){
+                        score = score + or * lvl + 10;
+                        nbmob = 0;
+                        lvl = lvl + 1;
+                        vie = hp * lvl;
+                        monster();
 
-                  }
-            });
+                    } else{
+
+                    }
+              });
+            }
         }
-
-
-
 
     $("#monster").click(monster());
     $("#lvluphero1").click(function(){
@@ -189,4 +232,4 @@
 
     setInterval(function(){
       affichageGeneral();
-    }, 1000);
+    }, 100);
